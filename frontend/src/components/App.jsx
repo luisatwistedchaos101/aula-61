@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Header from "./Header";
 import NowPlaying from "./NowPlaying";
+import Playlist from "./Playlist";
+
 
 export default function App() {
   const [showProgressBar, setShowProgressBar] = useState(true);
@@ -12,6 +14,7 @@ export default function App() {
   return (
     <>
       <Header handleShowMusic={handleShowMusic} title="Tocando Agora" />
+      <Playlist/>
       <NowPlaying showProgressBar={showProgressBar} />
     </>
   );
